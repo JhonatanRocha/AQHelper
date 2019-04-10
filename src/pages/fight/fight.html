@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>AQ Helper</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <ion-item-group>
+    <ion-item-divider color="dark">
+      <ion-img width="30" height="30" [src]="pathDiceAttack"></ion-img>
+      <h2>ATAQUE</h2>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label color="primary" floating>Qtd de Ataque</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Ataque a Distância
+      </ion-label>
+      <ion-toggle #toggleRanged color="primary" (ionChange)="toggleRangedAttack(toggleRanged.checked)">
+      </ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label class="labelRerrol">
+        <ion-img width="30" height="30" src="assets/imgs/dices/reroll.png"></ion-img>
+        <h2 style="margin-left: 10px">Há Rerrolagem?</h2>
+      </ion-label>
+      <ion-toggle #toggleRerrollAttack color="primary" (ionChange)="hasRerrolAttack(toggleRerrollAttack.checked)">
+      </ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="flagRerrollAttack">
+      <ion-label color="primary" floating>Qtd de Rerolagem</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider color="dark">
+      <ion-img width="30" height="30" src="assets/imgs/dices/symbol_block.png"></ion-img>
+      <h2>DEFESA</h2>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label color="primary" floating>Qtd de Defesa</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="labelRerrol">
+        <ion-img width="30" height="30" src="assets/imgs/dices/reroll.png"></ion-img>
+        <h2 style="margin-left: 10px">Há Rerrolagem?</h2>
+      </ion-label>
+      <ion-toggle #toggleRerrollDefense color="primary" (ionChange)="hasRerrolDefense(toggleRerrollDefense.checked)">
+      </ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="flagRerrollDefense">
+      <ion-label color="primary" floating>Qtd de Rerolagem</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-fab top right edge>
+    <button ion-fab icon-end color="light">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

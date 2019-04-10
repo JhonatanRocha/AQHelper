@@ -1,7 +1,7 @@
 {
   "name": "AQHelper",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Jhonatan Rocha",
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
@@ -32,7 +32,8 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.0",
-    "typescript": "2.4.2"
+    "typescript": "2.4.2",
+    "ws": "3.3.2"
   },
   "description": "An Ionic project"
 }
