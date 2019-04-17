@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the FightPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { FightResultPage } from '../fight-result/fight-result';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FightPage {
 
-  flagIsRangedAttack = false;
-  flagRerrollAttack = false;
-  flagRerrollDefense = false;
-  pathDiceAttack = 'assets/imgs/dices/symbol_melee_reverse.png';
-
+  private diceAttack = 0;
+  private rerrollAtack = 0;
+  private diceDefense = 0;
+  private rerrollDefense = 0;
+  private headerAttack = 'Ataque Próximo';
+  private flagIsRangedAttack = false;
+  private flagRerrollAttack = false;
+  private flagRerrollDefense = false;
+  private pathDiceAttack = 'assets/imgs/dices/symbol_melee_reverse.png';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -27,8 +25,10 @@ export class FightPage {
   public toggleRangedAttack(toggleRangedAttack: boolean): void {
     if (toggleRangedAttack) {
       this.pathDiceAttack = 'assets/imgs/dices/symbol_ranged_reverse.png';
+      this.headerAttack = 'Ataque a Distância';
     } else {
       this.pathDiceAttack = 'assets/imgs/dices/symbol_melee_reverse.png';
+      this.headerAttack = 'Ataque Próximo';
     }
 
     this.flagIsRangedAttack = toggleRangedAttack;
@@ -42,4 +42,19 @@ export class FightPage {
     this.flagRerrollDefense = hasRerrolDefense;
   }
 
+  public fight(): void {
+    this.navCtrl.push(FightResultPage.name, {
+      diceAttack: this.checkNullValue(this.diceAttack),
+      isRangedAttack: this.flagIsRangedAttack,
+      hasRerrolAttack: this.flagRerrollAttack,
+      rerrollAtack: this.checkNullValue(this.rerrollAtack),
+      diceDefense: this.checkNullValue(this.diceDefense),
+      hasRerrolDefense: this.flagRerrollDefense,
+      rerrollDefense: this.checkNullValue(this.rerrollDefense)
+    });
+  }
+
+  private checkNullValue(numberToCheck: number): number {
+    return numberToCheck.toString() === '' ? 0 : numberToCheck;
+  }
 }

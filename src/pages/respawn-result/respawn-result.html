@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Resultado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid text-center>
+    <ion-row class="row-1">
+      <ion-col col-4>
+        <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
+        <div class="dice-result">
+          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+        </div>
+        <h6 class="tile-number">1</h6>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
+        <div class="dice-result">
+          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+        </div>
+        <h6 class="tile-number">2</h6>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
+        <div class="dice-result">
+          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+        </div>
+        <h6 class="tile-number">3</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row-2">
+      <ion-col col-6>
+        <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
+        <div class="dice-result-2">
+          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+        </div>
+        <h6 class="tile-number-2">4</h6>
+      </ion-col>
+      <ion-col col-6>
+        <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
+        <div *ngIf="respawnResult[4].flagTwice" class="dice-result-inbox-2">
+          <ion-img width="70" height="70" [src]="respawnResult[4].imgInboxPath"></ion-img>
+        </div>
+        <div *ngIf="!respawnResult[4].flagTwice" class="dice-result-2">
+          <ion-img width="35" height="35" [src]="respawnResult[4].imgSwordDice1Path"></ion-img>
+          <ion-img width="35" height="35" [src]="respawnResult[4].imgSwordDice2Path"></ion-img>
+        </div>
+        <h6 class="tile-number-inbox-2">5</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

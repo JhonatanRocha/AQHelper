@@ -1,0 +1,35 @@
+page-fight-result {
+  ion-img {
+    background-color: rgba(0,0,0,0) !important;
+  }
+
+  .resultAttack {
+    position: relative;
+    margin: -1.2em 0 0 0.7em;
+    font-size: 3.0em;
+    color: #D02727;
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: #D02727;
+    font-weight: bold;
+  }
+
+  .blockAttack {
+    position: relative;
+    margin: -1.2em 0 0 1.2em;
+    font-size: 3.0em;
+    color: #F79626;
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: #F79626;
+    font-weight: bold;
+  }
+
+  .resultWound {
+    position: relative;
+    margin: -1.2em 0 0 1.2em;
+    font-size: 3.0em;
+    color: #6575CB;
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: #6575CB;
+    font-weight: bold;
+  }
+}

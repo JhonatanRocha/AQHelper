@@ -17,7 +17,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     CursePage,
     FightPage,
     DraftPage,
-    RespawnPage
+    RespawnPage,
   ],
   imports: [
     BrowserModule,
@@ -26,11 +26,11 @@ import { TabsPage } from '../pages/tabs/tabs';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    TabsPage,
     FightPage,
     RespawnPage,
     CursePage,
-    DraftPage,
-    TabsPage
+    DraftPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Resultado</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid text-center>
+    <ion-row>
+      <ion-col col-4>
+        <ion-img width="80" height="80" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+        <h2 class="resultAttack">{{ attackResult }}</h2>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img width="80" height="80" src="assets/imgs/dices/symbol_ranged.png"></ion-img>
+        <h2 class="resultAttack">{{ rangedAttackResult }}</h2>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img width="80" height="80" src="assets/imgs/dices/symbol_crit.png"></ion-img>
+        <h2 class="resultAttack">{{ attackCritResult }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-img width="80" height="80" src="assets/imgs/dices/symbol_block.png"></ion-img>
+        <h2 class="blockAttack">{{ blockResult }}</h2>
+      </ion-col>
+      <ion-col col-6>
+        <ion-img width="80" height="80" src="assets/imgs/dices/symbol_critblock.png"></ion-img>
+        <h2 class="blockAttack">{{ blockCritResult }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-img width="80" height="80" src="assets/imgs/dices/wound.png"></ion-img>
+        <h2 class="resultWound">{{ wound }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <h1>Texto de Vitória aqui</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <h1>Imagem de Vitória aqui</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
