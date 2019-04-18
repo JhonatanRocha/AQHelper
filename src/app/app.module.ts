@@ -1,36 +1,31 @@
-import { FightPage } from './../pages/fight/fight';
+import { FightPageModule } from './../pages/fight/fight.module';
+import { RespawnPageModule } from './../pages/respawn/respawn.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
-import { RespawnPage } from '../pages/respawn/respawn';
-import { CursePage } from '../pages/curse/curse';
-import { DraftPage } from '../pages/draft/draft';
-import { TabsPage } from '../pages/tabs/tabs';
+import { CursePageModule } from '../pages/curse/curse.module';
+import { DraftPageModule } from '../pages/draft/draft.module';
+import { TabsPageModule } from '../pages/tabs/tabs.module';
 
 @NgModule({
   declarations: [
-    MyApp,
-    TabsPage,
-    CursePage,
-    FightPage,
-    DraftPage,
-    RespawnPage,
+    MyApp
   ],
   imports: [
     BrowserModule,
+    TabsPageModule,
+    CursePageModule,
+    DraftPageModule,
+    RespawnPageModule,
+    FightPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    TabsPage,
-    FightPage,
-    RespawnPage,
-    CursePage,
-    DraftPage
+    MyApp
   ],
   providers: [
     StatusBar,

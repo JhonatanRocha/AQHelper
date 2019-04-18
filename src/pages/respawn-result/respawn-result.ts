@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the RespawnResultPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-respawn-result',
@@ -18,7 +11,7 @@ export class RespawnResultPage {
   public amountDices = 10;
   public respawnDiceResult: any[] = [];
   public respawnResult: any[] = [];
-  public imgInboxPath = 'assets/imgs/graveyard/inbox.png';
+  public imgInboxPath = 'assets/imgs/graveyard/inbox2.png';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.rollRespawn(this.amountDices);
@@ -40,6 +33,7 @@ export class RespawnResultPage {
     }
     console.log(this.respawnDiceResult);
     this.buildResult(this.respawnDiceResult);
+    console.log(this.respawnResult);
   }
 
   public buildResult(dices: any[]): void {
@@ -55,106 +49,107 @@ export class RespawnResultPage {
 
       for (var i = 0; i < respawn.dices.length; i++) {
         if (this.isSwordResult(respawn.dices[0]) && this.isSwordResult(respawn.dices[1])) {
-          if (swordAndSword > 2) {
+          if (swordAndSword < 2) {
             this.respawnResult.push({
               flagTwice: false,
-              imgSwordDice1Path: this.getImgDicePath(respawn.dices[0]),
-              imgSwordDice2Path: this.getImgDicePath(respawn.dices[1]),
+              imgDiceResult1Path: this.getImgDicePath(respawn.dices[0]),
+              imgDiceResult2Path: this.getImgDicePath(respawn.dices[1]),
               imgInboxPath: null
             });
           } else {
             this.respawnResult.push({
               flagTwice: true,
-              imgSwordDice1Path: null,
-              imgSwordDice2Path: null,
+              imgDiceResult1Path: null,
+              imgDiceResult2Path: null,
               imgInboxPath: this.imgInboxPath
             });
-
-            swordAndSword++;
           }
-        } else if ((this.isSwordResult(respawn.dices[0]) || this.isCritResult(respawn.dices[0])) &&
-          (this.isSwordResult(respawn.dices[1]) || this.isCritResult(respawn.dices[1]))) {
-          if (swordAndCrit > 2) {
+          swordAndSword++;
+
+        } else if ((this.isSwordResult(respawn.dices[0]) && this.isCritResult(respawn.dices[1])) ||
+          (this.isSwordResult(respawn.dices[1]) && this.isCritResult(respawn.dices[0]))) {
+          if (swordAndCrit < 2) {
             this.respawnResult.push({
               flagTwice: false,
-              imgSwordDice1Path: this.getImgDicePath(respawn.dices[0]),
-              imgSwordDice2Path: this.getImgDicePath(respawn.dices[1]),
+              imgDiceResult1Path: this.getImgDicePath(respawn.dices[0]),
+              imgDiceResult2Path: this.getImgDicePath(respawn.dices[1]),
               imgInboxPath: null
             });
           } else {
             this.respawnResult.push({
               flagTwice: true,
-              imgSwordDice1Path: null,
-              imgSwordDice2Path: null,
+              imgDiceResult1Path: null,
+              imgDiceResult2Path: null,
               imgInboxPath: this.imgInboxPath
             });
-
-            swordAndCrit++;
           }
-        } else if ((this.isSwordResult(respawn.dices[0]) || this.isBowResult(respawn.dices[0])) &&
-          (this.isSwordResult(respawn.dices[1]) || this.isBowResult(respawn.dices[1]))) {
-          if (swordAndBow > 2) {
+          swordAndCrit++;
+
+        } else if ((this.isSwordResult(respawn.dices[0]) && this.isBowResult(respawn.dices[1])) ||
+          (this.isSwordResult(respawn.dices[1]) && this.isBowResult(respawn.dices[0]))) {
+          if (swordAndBow < 2) {
             this.respawnResult.push({
               flagTwice: false,
-              imgSwordDice1Path: this.getImgDicePath(respawn.dices[0]),
-              imgSwordDice2Path: this.getImgDicePath(respawn.dices[1]),
+              imgDiceResult1Path: this.getImgDicePath(respawn.dices[0]),
+              imgDiceResult2Path: this.getImgDicePath(respawn.dices[1]),
               imgInboxPath: null
             });
           } else {
             this.respawnResult.push({
               flagTwice: true,
-              imgSwordDice1Path: null,
-              imgSwordDice2Path: null,
+              imgDiceResult1Path: null,
+              imgDiceResult2Path: null,
               imgInboxPath: this.imgInboxPath
             });
-
-            swordAndBow++;
           }
+          swordAndBow++;
+
         } else if (this.isBowResult(respawn.dices[0]) && this.isBowResult(respawn.dices[1])) {
-          if (bowAndBow > 2) {
+          if (bowAndBow < 2) {
             this.respawnResult.push({
               flagTwice: false,
-              imgSwordDice1Path: this.getImgDicePath(respawn.dices[0]),
-              imgSwordDice2Path: this.getImgDicePath(respawn.dices[1]),
+              imgDiceResult1Path: this.getImgDicePath(respawn.dices[0]),
+              imgDiceResult2Path: this.getImgDicePath(respawn.dices[1]),
               imgInboxPath: null
             });
           } else {
             this.respawnResult.push({
               flagTwice: true,
-              imgSwordDice1Path: null,
-              imgSwordDice2Path: null,
+              imgDiceResult1Path: null,
+              imgDiceResult2Path: null,
               imgInboxPath: this.imgInboxPath
             });
-
-            bowAndBow++;
           }
-        } else if ((this.isBowResult(respawn.dices[0]) || this.isCritResult(respawn.dices[0])) &&
-          (this.isBowResult(respawn.dices[1]) || this.isCritResult(respawn.dices[1]))) {
-          if (bowAndCrit > 2) {
+          bowAndBow++;
+
+        } else if ((this.isBowResult(respawn.dices[0]) && this.isCritResult(respawn.dices[1])) ||
+          (this.isBowResult(respawn.dices[1]) && this.isCritResult(respawn.dices[0]))) {
+          if (bowAndCrit < 2) {
             this.respawnResult.push({
               flagTwice: false,
-              imgSwordDice1Path: this.getImgDicePath(respawn.dices[0]),
-              imgSwordDice2Path: this.getImgDicePath(respawn.dices[1]),
+              imgDiceResult1Path: this.getImgDicePath(respawn.dices[0]),
+              imgDiceResult2Path: this.getImgDicePath(respawn.dices[1]),
               imgInboxPath: null
             });
           } else {
             this.respawnResult.push({
               flagTwice: true,
-              imgSwordDice1Path: null,
-              imgSwordDice2Path: null,
+              imgDiceResult1Path: null,
+              imgDiceResult2Path: null,
               imgInboxPath: this.imgInboxPath
             });
-
-            bowAndCrit++;
           }
+          i === 1 ? bowAndCrit++ : null;
+
         } else {
           this.respawnResult.push({
             flagTwice: true,
-            imgSwordDice1Path: null,
-            imgSwordDice2Path: null,
+            imgDiceResult1Path: null,
+            imgDiceResult2Path: null,
             imgInboxPath: this.imgInboxPath
           });
         }
+        i++;
       }
     }
   }

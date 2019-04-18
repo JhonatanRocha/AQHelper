@@ -9,17 +9,19 @@ import { FightResultPage } from '../fight-result/fight-result';
 })
 export class FightPage {
 
-  private diceAttack = 0;
-  private rerrollAtack = 0;
-  private diceDefense = 0;
-  private rerrollDefense = 0;
-  private headerAttack = 'Ataque Próximo';
-  private flagIsRangedAttack = false;
-  private flagRerrollAttack = false;
-  private flagRerrollDefense = false;
-  private pathDiceAttack = 'assets/imgs/dices/symbol_melee_reverse.png';
+  public diceAttack = 0;
+  public rerrollAtack = 0;
+  public diceDefense = 0;
+  public rerrollDefense = 0;
+  public headerAttack: string;
+  public flagIsRangedAttack = false;
+  public flagRerrollAttack = false;
+  public flagRerrollDefense = false;
+  public pathDiceAttack: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.headerAttack = 'Ataque Próximo';
+    this.pathDiceAttack = 'assets/imgs/dices/symbol_melee_reverse.png';
   }
 
   public toggleRangedAttack(toggleRangedAttack: boolean): void {

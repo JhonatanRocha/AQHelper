@@ -2,6 +2,11 @@
   <ion-navbar color="primary">
     <ion-title>AQ Helper</ion-title>
   </ion-navbar>
+  <ion-fab bottom right edge>
+    <button ion-fab icon-end color="light" (click)="fight()">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-header>
 
 <ion-content padding text-center>
@@ -63,10 +68,5 @@
       </ion-item>
     </ion-item-group>
 
-    <ion-fab top right edge>
-      <button ion-fab icon-end color="light" (click)="fight()">
-        <ion-icon name="send"></ion-icon>
-      </button>
-    </ion-fab>
   </form>
 </ion-content>

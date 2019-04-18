@@ -2,46 +2,56 @@
   <ion-navbar color="primary">
     <ion-title>Resultado</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
   <ion-grid text-center>
     <ion-row class="row-1">
       <ion-col col-4>
         <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
-        <div class="dice-result">
-          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
-          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+        <div *ngIf="respawnResult[0].flagTwice" class="dice-result-inbox">
+          <ion-img width="70" height="70" [src]="respawnResult[0].imgInboxPath"></ion-img>
         </div>
-        <h6 class="tile-number">1</h6>
+        <div *ngIf="!respawnResult[0].flagTwice" class="dice-result">
+          <ion-img width="35" height="35" [src]="respawnResult[0].imgDiceResult1Path"></ion-img>
+          <ion-img width="35" height="35" [src]="respawnResult[0].imgDiceResult2Path"></ion-img>
+        </div>
+        <h6 [class]="respawnResult[0].flagTwice ? 'tile-number-inbox' : 'tile-number'">3</h6>
       </ion-col>
       <ion-col col-4>
         <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
-        <div class="dice-result">
-          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
-          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+        <div *ngIf="respawnResult[1].flagTwice" class="dice-result-inbox">
+          <ion-img width="70" height="70" [src]="respawnResult[1].imgInboxPath"></ion-img>
         </div>
-        <h6 class="tile-number">2</h6>
+        <div *ngIf="!respawnResult[1].flagTwice" class="dice-result">
+          <ion-img width="35" height="35" [src]="respawnResult[1].imgDiceResult1Path"></ion-img>
+          <ion-img width="35" height="35" [src]="respawnResult[1].imgDiceResult2Path"></ion-img>
+        </div>
+        <h6 [class]="respawnResult[1].flagTwice ? 'tile-number-inbox' : 'tile-number'">2</h6>
       </ion-col>
       <ion-col col-4>
         <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
-        <div class="dice-result">
-          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
-          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+        <div *ngIf="respawnResult[2].flagTwice" class="dice-result-inbox">
+          <ion-img width="70" height="70" [src]="respawnResult[2].imgInboxPath"></ion-img>
         </div>
-        <h6 class="tile-number">3</h6>
+        <div *ngIf="!respawnResult[2].flagTwice" class="dice-result">
+          <ion-img width="35" height="35" [src]="respawnResult[2].imgDiceResult1Path"></ion-img>
+          <ion-img width="35" height="35" [src]="respawnResult[2].imgDiceResult2Path"></ion-img>
+        </div>
+        <h6 [class]="respawnResult[2].flagTwice ? 'tile-number-inbox' : 'tile-number'">3</h6>
       </ion-col>
     </ion-row>
     <ion-row class="row-2">
       <ion-col col-6>
         <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
-        <div class="dice-result-2">
-          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
-          <ion-img width="35" height="35" src="assets/imgs/dices/symbol_melee.png"></ion-img>
+        <div *ngIf="respawnResult[3].flagTwice" class="dice-result-inbox-2">
+          <ion-img width="70" height="70" [src]="respawnResult[3].imgInboxPath"></ion-img>
         </div>
-        <h6 class="tile-number-2">4</h6>
+        <div *ngIf="!respawnResult[3].flagTwice" class="dice-result-2">
+          <ion-img width="35" height="35" [src]="respawnResult[3].imgDiceResult1Path"></ion-img>
+          <ion-img width="35" height="35" [src]="respawnResult[3].imgDiceResult2Path"></ion-img>
+        </div>
+        <h6 [class]="respawnResult[3].flagTwice ? 'tile-number-inbox-2' : 'tile-number-2'">4</h6>
       </ion-col>
       <ion-col col-6>
         <ion-img width="80" height="100" src="assets/imgs/graveyard/graveyard-asset.png"></ion-img>
@@ -49,10 +59,15 @@
           <ion-img width="70" height="70" [src]="respawnResult[4].imgInboxPath"></ion-img>
         </div>
         <div *ngIf="!respawnResult[4].flagTwice" class="dice-result-2">
-          <ion-img width="35" height="35" [src]="respawnResult[4].imgSwordDice1Path"></ion-img>
-          <ion-img width="35" height="35" [src]="respawnResult[4].imgSwordDice2Path"></ion-img>
+          <ion-img width="35" height="35" [src]="respawnResult[4].imgDiceResult1Path"></ion-img>
+          <ion-img width="35" height="35" [src]="respawnResult[4].imgDiceResult2Path"></ion-img>
         </div>
-        <h6 class="tile-number-inbox-2">5</h6>
+        <h6 [class]="respawnResult[4].flagTwice ? 'tile-number-inbox-2' : 'tile-number-2'">5</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 style="margin-top: 29%;">
+        <p>* Note que o aplicativo não considera os espaços ocupados do tabuleiro, apenas os resultados dos dados.</p>
       </ion-col>
     </ion-row>
   </ion-grid>
