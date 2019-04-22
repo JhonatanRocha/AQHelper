@@ -1,0 +1,67 @@
+[
+  {
+    "id": "S-01",
+    "name": "Espada Enferrujada",
+    "description": null,
+    "defenseAmount": 0,
+    "offensiveAmount": 3,
+    "rerollAmount": 0,
+    "aditionalHP": 0,
+    "type": "Espada",
+    "typeAttack": "Ataque Próximo",
+    "price": 0,
+    "img": ""
+  },
+  {
+    "id": "S-02",
+    "name": "Adaga Aparadora",
+    "description": null,
+    "defenseAmount": 1,
+    "offensiveAmount": 2,
+    "rerollAmount": 0,
+    "aditionalHP": 0,
+    "type": "Espada",
+    "typeAttack": "Ataque Próximo",
+    "price": 0,
+    "img": ""
+  },
+  {
+    "id": "S-03",
+    "name": "Estilingue",
+    "description": null,
+    "defenseAmount": 0,
+    "offensiveAmount": 2,
+    "rerollAmount": 0,
+    "aditionalHP": 0,
+    "type": "Arco",
+    "typeAttack": "Ataque a Distância",
+    "price": 0,
+    "img": ""
+  },
+  {
+    "id": "S-04",
+    "name": "Raio Nova",
+    "description": "Se este ataque rolar pelo menos um crítico, poderá atingir um inimigo adicional Perto do alvo.",
+    "defenseAmount": 0,
+    "offensiveAmount": 2,
+    "rerollAmount": 0,
+    "aditionalHP": 0,
+    "type": "Mágica",
+    "typeAttack": "Ataque a Distância",
+    "price": 0,
+    "img": ""
+  },
+  {
+    "id": "S-05",
+    "name": "Drenar Vida",
+    "description": "Cada acerto cura 1 Ferimento desse Herói.",
+    "defenseAmount": 0,
+    "offensiveAmount": 2,
+    "rerollAmount": 0,
+    "aditionalHP": 0,
+    "type": "Mágica",
+    "typeAttack": "Ataque a Distância",
+    "price": 0,
+    "img": ""
+  }
+]
