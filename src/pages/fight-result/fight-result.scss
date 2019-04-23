@@ -32,4 +32,16 @@ page-fight-result {
     -webkit-text-fill-color: #6575CB;
     font-weight: bold;
   }
+
+  .divider-sucess {
+    background-color: #1B7D18;
+    border-radius: 20px;
+    margin-top: 40px;
+  }
+
+  .divider-error {
+    background-color: #AB0D0D;
+    border-radius: 20px;
+    margin-top: 40px;
+  }
 }

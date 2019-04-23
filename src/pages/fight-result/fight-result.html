@@ -36,14 +36,12 @@
         <h2 class="resultWound">{{ wound }}</h2>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col col-12>
-        <h1>Texto de Vitória aqui</h1>
+    <ion-row [class.divider-sucess]="this.wound > 0" [class.divider-error]="!this.wound > 0">
+      <ion-col col-6>
+        <h5 style="margin-top: 15px; color: #ffffff">{{textFightResult | uppercase}}</h5>
       </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-12>
-        <h1>Imagem de Vitória aqui</h1>
+      <ion-col col-6>
+        <ion-img [src]="imgFightResult" width="70" height="64" style="border-radius: 45px;"></ion-img>
       </ion-col>
     </ion-row>
   </ion-grid>

@@ -15,6 +15,8 @@ export class FightResultPage {
   public blockCritResult = 0;
   public wound = 0;
   public pathDiceAttack = 'assets/imgs/dices/symbol_melee.png';
+  public textFightResult = 'Ataque Efetivo';
+  public imgFightResult = 'assets/imgs/dices/attack.png';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
@@ -106,6 +108,14 @@ export class FightResultPage {
     const total = totalAttack - totalDefense;
 
     total < 0 ? this.wound = 0 : this.wound = total;
+
+    if(this.wound > 0) {
+      this.imgFightResult = 'assets/imgs/dices/attack.png';
+      this.textFightResult = 'Ataque com Sucesso!';
+    } else {
+      this.textFightResult = 'Ataque Bloqueado!';
+      this.imgFightResult = 'assets/imgs/dices/defense.png';
+    }
   }
 
 }

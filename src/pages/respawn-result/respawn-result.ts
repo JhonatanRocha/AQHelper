@@ -11,7 +11,7 @@ export class RespawnResultPage {
   public amountDices = 10;
   public respawnDiceResult: any[] = [];
   public respawnResult: any[] = [];
-  public imgInboxPath = 'assets/imgs/graveyard/inbox2.png';
+  public imgInboxPath = 'assets/imgs/graveyard/inbox.png';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.rollRespawn(this.amountDices);
