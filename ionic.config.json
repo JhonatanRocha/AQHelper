@@ -1,6 +1,6 @@
 {
   "name": "AQHelper",
-  "app_id": "",
+  "app_id": "aqhelper",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

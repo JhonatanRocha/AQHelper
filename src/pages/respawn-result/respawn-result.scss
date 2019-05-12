@@ -1,23 +1,45 @@
 page-respawn-result {
 
-  ion-img {
+  img {
     background-color: rgba(0,0,0,0) !important;
   }
 
+  .col {
+    position: relative;
+  }
+
   .dice-result {
-    margin-top: -65%;
+    // margin-top: -65%;
+    /*: absolute;
+    z-index: 0;
+    margin-top: 40px;*/
+
+
+    position: relative;
+    top: 77px;
   }
 
   .dice-result-2 {
-    margin-top: -45%;
+    // margin-top: -45%;
+    position: absolute;
+    z-index: 0;
+    margin-top: 40px;
   }
 
   .dice-result-inbox {
-    margin-top: -74%;
+    // margin-top: -74%;
+    /*position: absolute;
+    z-index: 0;
+    margin-top: 27px;*/
+    position: relative;
+    top: 80px;
   }
 
   .dice-result-inbox-2 {
-    margin-top: -50%;
+    // margin-top: -50%;
+    position: absolute;
+    z-index: 0;
+    margin-top: 27px;
   }
 
   .row-1 {
@@ -26,5 +48,15 @@ page-respawn-result {
 
   .row-2 {
     margin-top: 10%;
+  }
+
+  .background-graveyard {
+    background: url('../assets/imgs/graveyard/aqhelper-graveyard2.png') no-repeat transparent;
+    background-size: cover;
+    background-position: center;
+  }
+
+  ion-grid {
+    color: #ffffff;
   }
 }

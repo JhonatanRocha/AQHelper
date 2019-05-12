@@ -2,71 +2,83 @@
   <ion-navbar color="primary">
     <ion-title>AQ Helper</ion-title>
   </ion-navbar>
+  <ion-fab bottom right edge>
+    <button ion-fab icon-end color="light" (click)="begeinDraftCurse()">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-header>
 
 
 <ion-content padding text-center>
-  <form #curseForm="ngForm">
+  <form #curseForm="ngForm" style="margin-top: 20px;">
+    <ion-item>
+      <ion-label>
+        Arcadia Quest Inferno?
+      </ion-label>
+      <ion-toggle #toggleInferno color="primary" (ionChange)="toggleInfernoDeck(toggleInferno.checked)">
+      </ion-toggle>
+    </ion-item>
     <ion-item-group>
       <ion-item-divider color="dark">
         <h2>Jogador 1</h2>
       </ion-item-divider>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 1:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 1:</ion-label>
+        <ion-input type="number" [(ngModel)]="player1Hero1" max="99" name="playerOneHero1" #playerOneHero1="ngModel"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 2:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 2:</ion-label>
+        <ion-input type="number" [(ngModel)]="player1Hero2" max="99" name="playerOneHero2" #playerOneHero2="ngModel"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 3:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 3:</ion-label>
+        <ion-input type="number" [(ngModel)]="player1Hero3" max="99" name="playerOneHero3" #playerOneHero3="ngModel"></ion-input>
       </ion-item>
       <ion-item-divider color="dark">
         <h2>Jogador 2</h2>
       </ion-item-divider>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 1:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 1:</ion-label>
+        <ion-input type="number" [(ngModel)]="player2Hero1" max="99" name="playerTwoHero1" #playerTwoHero1="ngModel"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 2:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 2:</ion-label>
+        <ion-input type="number" [(ngModel)]="player2Hero2" max="99" name="playerTwoHero2" #playerTwoHero2="ngModel"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 3:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 3:</ion-label>
+        <ion-input type="number" [(ngModel)]="player2Hero3" max="99" name="playerTwoHero3" #playerTwoHero3="ngModel"></ion-input>
       </ion-item>
       <ion-item-divider color="dark">
         <h2>Jogador 3</h2>
       </ion-item-divider>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 1:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 1:</ion-label>
+        <ion-input type="number" [(ngModel)]="player3Hero1" max="99" name="playerThreeHero1" #playerThreeHero1="ngModel"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 2:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 2:</ion-label>
+        <ion-input type="number" [(ngModel)]="player3Hero2" max="99" name="playerThreeHero2" #playerThreeHero2="ngModel"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 3:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 3:</ion-label>
+        <ion-input type="number" [(ngModel)]="player3Hero3" max="99" name="playerThreeHero3" #playerThreeHero3="ngModel"></ion-input>
       </ion-item>
       <ion-item-divider color="dark">
         <h2>Jogador 4</h2>
       </ion-item-divider>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 1:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 1:</ion-label>
+        <ion-input type="number" [(ngModel)]="player4Hero1" max="99" name="playerFourHero1" #playerFourHero1="ngModel"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 2:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 2:</ion-label>
+        <ion-input type="number" [(ngModel)]="player4Hero2" max="99" name="playerFourHero2" #playerFourHero2="ngModel"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Qtd Mortes Heroi 3:</ion-label>
-        <ion-input type="number" max="99"></ion-input>
+        <ion-label color="dark">Qtd Mortes Heroi 3:</ion-label>
+        <ion-input type="number" [(ngModel)]="player4Hero3" max="99" name="playerFourHero3" #playerFourHero3="ngModel"></ion-input>
       </ion-item>
     </ion-item-group>
   </form>

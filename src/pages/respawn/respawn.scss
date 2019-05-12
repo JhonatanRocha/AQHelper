@@ -1,8 +1,14 @@
 page-respawn {
 
-  ion-img {
+  img {
     background-color: rgba(0,0,0,0) !important;
     min-width: 53px;
     min-height: 56px;
+  }
+
+  .background-graveyard {
+    background: url('../assets/imgs/graveyard/aqhelper-graveyard2.png') no-repeat transparent;
+    background-size: cover;
+    background-position: center;
   }
 }

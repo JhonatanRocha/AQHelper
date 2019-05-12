@@ -1,12 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CurseResultPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { PlayerCurse } from './../../model/playerCurse';
+import { Curse } from './../../model/curse';
+import { Component, OnInit } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Loading } from 'ionic-angular';
+import { HeroCurse } from '../../model/heroCurse';
 
 @IonicPage()
 @Component({
@@ -14,12 +10,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'curse-result.html',
 })
 export class CurseResultPage {
+  /**
+INFD-00	- 10 cartas
+INFD-01	- 3 cartas
+INFD-02	- 2 cartas
+INFD-03	- 3 cartas
+INFD-04	- 2 cartas
+INFD-05	- 2 cartas
+INFD-06	- 1 carta
+INFD-07	- 1 carta
+24 total
+   */
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public players: PlayerCurse[] = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private _loadingCtrl: LoadingController) {
+
+    this.players = this.navParams.get('players');
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CurseResultPage');
-  }
-
 }

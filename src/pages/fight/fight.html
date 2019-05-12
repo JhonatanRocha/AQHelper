@@ -9,7 +9,7 @@
   </ion-fab>
 </ion-header>
 
-<ion-content padding text-center>
+<ion-content padding text-center class="background-fight">
   <form #fightForm="ngForm">
     <ion-item-group>
       <ion-item-divider color="dark">
@@ -18,7 +18,7 @@
       </ion-item-divider>
 
       <ion-item>
-        <ion-label color="primary" floating>Qtd de Ataque</ion-label>
+        <ion-label color="dark">Qtd de Ataque</ion-label>
         <ion-input type="number" [(ngModel)]="diceAttack" max="99"
           name="amountAttack" #amountAttack="ngModel"></ion-input>
       </ion-item>
@@ -38,7 +38,7 @@
         </ion-toggle>
       </ion-item>
       <ion-item *ngIf="flagRerrollAttack">
-        <ion-label color="primary" floating>Qtd de Rerolagem</ion-label>
+        <ion-label color="dark">Qtd de Rerolagem</ion-label>
         <ion-input type="number" [(ngModel)]="rerrollAtack" max="99"
           name="amountRerrollAttack" #amountRerrollAttack="ngModel"></ion-input>
       </ion-item>
@@ -49,7 +49,7 @@
         <h2>DEFESA</h2>
       </ion-item-divider>
       <ion-item>
-        <ion-label color="primary" floating>Qtd de Defesa</ion-label>
+        <ion-label color="dark">Qtd de Defesa</ion-label>
         <ion-input type="number" [(ngModel)]="diceDefense" max="99"
         name="amountDefense" #amountDefense="ngModel"></ion-input>
       </ion-item>
@@ -62,7 +62,7 @@
         </ion-toggle>
       </ion-item>
       <ion-item *ngIf="flagRerrollDefense">
-        <ion-label color="primary" floating>Qtd de Rerolagem</ion-label>
+        <ion-label color="dark">Qtd de Rerolagem</ion-label>
         <ion-input type="number" [(ngModel)]="rerrollDefense" max="99"
         name="amountRerrollDefense" #amountRerrollDefense="ngModel"></ion-input>
       </ion-item>

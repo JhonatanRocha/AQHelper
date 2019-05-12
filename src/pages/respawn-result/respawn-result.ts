@@ -31,9 +31,7 @@ export class RespawnResultPage {
         this.respawnDiceResult.push({ dices: [firstResult, secondResult] });
       }
     }
-    console.log(this.respawnDiceResult);
     this.buildResult(this.respawnDiceResult);
-    console.log(this.respawnResult);
   }
 
   public buildResult(dices: any[]): void {
@@ -44,9 +42,6 @@ export class RespawnResultPage {
     let bowAndCrit = 0;
 
     for (const respawn of dices) {
-      console.log(respawn.dices[0]);
-      console.log(respawn.dices[1]);
-
       for (var i = 0; i < respawn.dices.length; i++) {
         if (this.isSwordResult(respawn.dices[0]) && this.isSwordResult(respawn.dices[1])) {
           if (swordAndSword < 2) {

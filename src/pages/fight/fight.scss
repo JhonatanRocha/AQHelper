@@ -11,4 +11,10 @@ page-fight {
   .labelRerrol {
     display: contents;
   }
+
+  .background-fight {
+    background: url(../assets/imgs/dices/background.png) no-repeat transparent;
+    background-size: cover;
+    background-position: center;
+  }
 }
