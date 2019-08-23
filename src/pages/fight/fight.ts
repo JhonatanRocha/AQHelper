@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, TextInput } from 'ionic-angular';
-import { FightResultPage } from '../fight-result/fight-result';
 
 @IonicPage()
 @Component({
@@ -45,7 +44,7 @@ export class FightPage {
   }
 
   public fight(): void {
-    this.navCtrl.push(FightResultPage.name, {
+    this.navCtrl.push('FightResultPage', {
       diceAttack: this.checkNullValue(this.diceAttack),
       isRangedAttack: this.flagIsRangedAttack,
       hasRerrolAttack: this.flagRerrollAttack,

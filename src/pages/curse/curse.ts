@@ -1,10 +1,8 @@
 import { PlayerCurse } from './../../model/playerCurse';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Loading, LoadingController } from 'ionic-angular';
-import { CurseResultPage } from '../curse-result/curse-result';
 import { Curse } from '../../model/curse';
 import { HeroCurse } from '../../model/heroCurse';
-import { Input } from '@angular/compiler/src/core';
 import { NgModel } from '@angular/forms';
 
 @IonicPage()
@@ -47,12 +45,13 @@ export class CursePage {
     this.playersCurseForm = this.buildPlayersDeath();
     this.shuffleCards();
     this.setupPlayers();
-    this.loading.dismiss();
 
-    console.log('CurseResultPage.name', CurseResultPage.name);
-    this.navCtrl.push(CurseResultPage.name, {
-      players: this.players
-    });
+    setTimeout(() => {
+      this.loading.dismiss();
+      this.navCtrl.push('CurseResultPage', {
+        players: this.players
+      });
+    }, 3000);
   }
 
   private buildPlayersDeath(): any[] {
@@ -174,7 +173,7 @@ export class CursePage {
   public incrementHeroDeath(ngModel: NgModel): void {
     let deathAmount: number = 0;
 
-    if(ngModel.value != null && ngModel.value >= 0) {
+    if (ngModel.value != null && ngModel.value >= 0) {
       deathAmount = Number(ngModel.value);
       deathAmount++;
       ngModel.control.setValue(deathAmount);
@@ -186,7 +185,7 @@ export class CursePage {
   public decrementHeroDeath(ngModel: NgModel): void {
     let deathAmount: number = 0;
 
-    if(ngModel.value != null && ngModel.value > 0) {
+    if (ngModel.value != null && ngModel.value > 0) {
       deathAmount = Number(ngModel.value);
       deathAmount--;
       ngModel.control.setValue(deathAmount);

@@ -25,9 +25,9 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     DraftPageModule,
     RespawnPageModule,
     FightPageModule,
-    /*CurseResultPageModule,
+    CurseResultPageModule,
     RespawnResultPageModule,
-    FightResultPageModule,*/
+    FightResultPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
