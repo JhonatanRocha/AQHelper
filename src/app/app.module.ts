@@ -9,6 +9,10 @@ import { MyApp } from './app.component';
 import { CursePageModule } from '../pages/curse/curse.module';
 import { DraftPageModule } from '../pages/draft/draft.module';
 import { TabsPageModule } from '../pages/tabs/tabs.module';
+import { CurseResultPageModule } from '../pages/curse-result/curse-result.module';
+import { RespawnResultPageModule } from '../pages/respawn-result/respawn-result.module';
+import { FightResultPageModule } from '../pages/fight-result/fight-result.module';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,9 @@ import { TabsPageModule } from '../pages/tabs/tabs.module';
     DraftPageModule,
     RespawnPageModule,
     FightPageModule,
+    /*CurseResultPageModule,
+    RespawnResultPageModule,
+    FightResultPageModule,*/
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -30,7 +37,7 @@ import { TabsPageModule } from '../pages/tabs/tabs.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

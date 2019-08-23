@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, TextInput } from 'ionic-angular';
 import { FightResultPage } from '../fight-result/fight-result';
 
 @IonicPage()
@@ -58,5 +58,9 @@ export class FightPage {
 
   private checkNullValue(numberToCheck: number): number {
     return numberToCheck.toString() === '' ? 0 : numberToCheck;
+  }
+
+  public selectInputTextContent(textInput: TextInput) {
+    textInput._native.nativeElement.select();
   }
 }

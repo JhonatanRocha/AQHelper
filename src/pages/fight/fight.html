@@ -20,7 +20,7 @@
       <ion-item>
         <ion-label color="dark">Qtd de Ataque</ion-label>
         <ion-input type="number" [(ngModel)]="diceAttack" max="99"
-          name="amountAttack" #amountAttack="ngModel"></ion-input>
+          name="amountAttack" #amountAttack="ngModel" #qtdAttack (ionFocus)="selectInputTextContent(qtdAttack)"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>
@@ -40,7 +40,7 @@
       <ion-item *ngIf="flagRerrollAttack">
         <ion-label color="dark">Qtd de Rerolagem</ion-label>
         <ion-input type="number" [(ngModel)]="rerrollAtack" max="99"
-          name="amountRerrollAttack" #amountRerrollAttack="ngModel"></ion-input>
+          name="amountRerrollAttack" #amountRerrollAttack="ngModel" #qtdAttackRerrol (ionFocus)="selectInputTextContent(qtdAttackRerrol)"></ion-input>
       </ion-item>
     </ion-item-group>
     <ion-item-group>
@@ -51,7 +51,7 @@
       <ion-item>
         <ion-label color="dark">Qtd de Defesa</ion-label>
         <ion-input type="number" [(ngModel)]="diceDefense" max="99"
-        name="amountDefense" #amountDefense="ngModel"></ion-input>
+        name="amountDefense" #amountDefense="ngModel" #qtdDefense (ionFocus)="selectInputTextContent(qtdDefense)"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label class="labelRerrol">
@@ -64,7 +64,7 @@
       <ion-item *ngIf="flagRerrollDefense">
         <ion-label color="dark">Qtd de Rerolagem</ion-label>
         <ion-input type="number" [(ngModel)]="rerrollDefense" max="99"
-        name="amountRerrollDefense" #amountRerrollDefense="ngModel"></ion-input>
+        name="amountRerrollDefense" #amountRerrollDefense="ngModel" #qtdDefenseReroll (ionFocus)="selectInputTextContent(qtdDefenseReroll)"></ion-input>
       </ion-item>
     </ion-item-group>
 

@@ -4,6 +4,8 @@ import { IonicPage, NavController, NavParams, Loading, LoadingController } from 
 import { CurseResultPage } from '../curse-result/curse-result';
 import { Curse } from '../../model/curse';
 import { HeroCurse } from '../../model/heroCurse';
+import { Input } from '@angular/compiler/src/core';
+import { NgModel } from '@angular/forms';
 
 @IonicPage()
 @Component({
@@ -47,7 +49,7 @@ export class CursePage {
     this.setupPlayers();
     this.loading.dismiss();
 
-
+    console.log('CurseResultPage.name', CurseResultPage.name);
     this.navCtrl.push(CurseResultPage.name, {
       players: this.players
     });
@@ -56,32 +58,36 @@ export class CursePage {
   private buildPlayersDeath(): any[] {
     this.playersCurseForm = [];
     const playersDeath: any[] = [
-      { playerNumber: 1,
+      {
+        playerNumber: 1,
         heroes: [
-          {heroNumber: 1, deaths: this.checkNullValue(this.player1Hero1)},
-          {heroNumber: 2, deaths: this.checkNullValue(this.player1Hero2)},
-          {heroNumber: 3, deaths: this.checkNullValue(this.player1Hero3)},
+          { heroNumber: 1, deaths: this.checkNullValue(this.player1Hero1) },
+          { heroNumber: 2, deaths: this.checkNullValue(this.player1Hero2) },
+          { heroNumber: 3, deaths: this.checkNullValue(this.player1Hero3) },
         ]
       },
-      { playerNumber: 2,
+      {
+        playerNumber: 2,
         heroes: [
-          {heroNumber: 1, deaths: this.checkNullValue(this.player2Hero1)},
-          {heroNumber: 2, deaths: this.checkNullValue(this.player2Hero2)},
-          {heroNumber: 3, deaths: this.checkNullValue(this.player2Hero3)},
+          { heroNumber: 1, deaths: this.checkNullValue(this.player2Hero1) },
+          { heroNumber: 2, deaths: this.checkNullValue(this.player2Hero2) },
+          { heroNumber: 3, deaths: this.checkNullValue(this.player2Hero3) },
         ]
       },
-      { playerNumber: 3,
+      {
+        playerNumber: 3,
         heroes: [
-          {heroNumber: 1, deaths: this.checkNullValue(this.player3Hero1)},
-          {heroNumber: 2, deaths: this.checkNullValue(this.player3Hero2)},
-          {heroNumber: 3, deaths: this.checkNullValue(this.player3Hero3)},
+          { heroNumber: 1, deaths: this.checkNullValue(this.player3Hero1) },
+          { heroNumber: 2, deaths: this.checkNullValue(this.player3Hero2) },
+          { heroNumber: 3, deaths: this.checkNullValue(this.player3Hero3) },
         ]
       },
-      { playerNumber: 4,
+      {
+        playerNumber: 4,
         heroes: [
-          {heroNumber: 1, deaths: this.checkNullValue(this.player4Hero1)},
-          {heroNumber: 2, deaths: this.checkNullValue(this.player4Hero2)},
-          {heroNumber: 3, deaths: this.checkNullValue(this.player4Hero3)},
+          { heroNumber: 1, deaths: this.checkNullValue(this.player4Hero1) },
+          { heroNumber: 2, deaths: this.checkNullValue(this.player4Hero2) },
+          { heroNumber: 3, deaths: this.checkNullValue(this.player4Hero3) },
         ]
       }
     ];
@@ -92,11 +98,11 @@ export class CursePage {
   private checkNullValue(numberToCheck: number): number {
 
 
-    if(numberToCheck.toString() === '') {
+    if (numberToCheck.toString() === '') {
       numberToCheck = 0;
     }
 
-    if(numberToCheck > 12) {
+    if (numberToCheck > 12) {
       numberToCheck = 12;
     }
 
@@ -163,6 +169,30 @@ export class CursePage {
 
   public toggleInfernoDeck(toggleInferno: boolean): void {
     this.isInferno = toggleInferno;
+  }
+
+  public incrementHeroDeath(ngModel: NgModel): void {
+    let deathAmount: number = 0;
+
+    if(ngModel.value != null && ngModel.value >= 0) {
+      deathAmount = Number(ngModel.value);
+      deathAmount++;
+      ngModel.control.setValue(deathAmount);
+    } else {
+      ngModel.control.setValue(0);
+    }
+  }
+
+  public decrementHeroDeath(ngModel: NgModel): void {
+    let deathAmount: number = 0;
+
+    if(ngModel.value != null && ngModel.value > 0) {
+      deathAmount = Number(ngModel.value);
+      deathAmount--;
+      ngModel.control.setValue(deathAmount);
+    } else {
+      ngModel.control.setValue(0);
+    }
   }
 
   public getBaseCurseDeck(): void {

@@ -1,3 +1,4 @@
+import { CurseResultPageModule } from './../curse-result/curse-result.module';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { CursePage } from './curse';

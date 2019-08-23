@@ -23,63 +23,189 @@
       <ion-item-divider color="dark">
         <h2>Jogador 1</h2>
       </ion-item-divider>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 1:</ion-label>
-        <ion-input type="number" [(ngModel)]="player1Hero1" max="99" name="playerOneHero1" #playerOneHero1="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 2:</ion-label>
-        <ion-input type="number" [(ngModel)]="player1Hero2" max="99" name="playerOneHero2" #playerOneHero2="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 3:</ion-label>
-        <ion-input type="number" [(ngModel)]="player1Hero3" max="99" name="playerOneHero3" #playerOneHero3="ngModel"></ion-input>
-      </ion-item>
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 1:</label>
+        <input type="number" [(ngModel)]="player1Hero1" max="99" name="playerOneHero1" #playerOneHero1="ngModel"
+          class="death-amount-input" #playerOneH1Input (focus)="playerOneH1Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerOneHero1)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerOneHero1)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 2:</label>
+        <input type="number" [(ngModel)]="player1Hero2" max="99" name="playerOneHero2" #playerOneHero2="ngModel"
+          class="death-amount-input" #playerOneH2Input (focus)="playerOneH2Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerOneHero2)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerOneHero2)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 3:</label>
+        <input type="number" [(ngModel)]="player1Hero3" max="99" name="playerOneHero3" #playerOneHero3="ngModel"
+          class="death-amount-input" #playerOneH3Input (focus)="playerOneH3Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerOneHero3)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerOneHero3)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
       <ion-item-divider color="dark">
         <h2>Jogador 2</h2>
       </ion-item-divider>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 1:</ion-label>
-        <ion-input type="number" [(ngModel)]="player2Hero1" max="99" name="playerTwoHero1" #playerTwoHero1="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 2:</ion-label>
-        <ion-input type="number" [(ngModel)]="player2Hero2" max="99" name="playerTwoHero2" #playerTwoHero2="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 3:</ion-label>
-        <ion-input type="number" [(ngModel)]="player2Hero3" max="99" name="playerTwoHero3" #playerTwoHero3="ngModel"></ion-input>
-      </ion-item>
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 1:</label>
+        <input type="number" [(ngModel)]="player2Hero1" max="99" name="playerTwoHero1" #playerTwoHero1="ngModel"
+          class="death-amount-input" #playerTwoH1Input (focus)="playerTwoH1Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerTwoHero1)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerTwoHero1)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 2:</label>
+        <input type="number" [(ngModel)]="player2Hero2" max="99" name="playerTwoHero2" #playerTwoHero2="ngModel"
+          class="death-amount-input" #playerTwoH2Input (focus)="playerTwoH2Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerTwoHero2)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerTwoHero2)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 3:</label>
+        <input type="number" [(ngModel)]="player2Hero3" max="99" name="playerTwoHero3" #playerTwoHero3="ngModel"
+          class="death-amount-input" #playerTwoH3Input (focus)="playerTwoH2Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerTwoHero3)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerTwoHero3)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+
       <ion-item-divider color="dark">
         <h2>Jogador 3</h2>
       </ion-item-divider>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 1:</ion-label>
-        <ion-input type="number" [(ngModel)]="player3Hero1" max="99" name="playerThreeHero1" #playerThreeHero1="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 2:</ion-label>
-        <ion-input type="number" [(ngModel)]="player3Hero2" max="99" name="playerThreeHero2" #playerThreeHero2="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 3:</ion-label>
-        <ion-input type="number" [(ngModel)]="player3Hero3" max="99" name="playerThreeHero3" #playerThreeHero3="ngModel"></ion-input>
-      </ion-item>
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 1:</label>
+        <input type="number" [(ngModel)]="player3Hero1" max="99" name="playerThreeHero1" #playerThreeHero1="ngModel"
+          class="death-amount-input" #playerThreeH1Input (focus)="playerThreeH1Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerThreeHero1)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerThreeHero1)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 2:</label>
+        <input type="number" [(ngModel)]="player3Hero2" max="99" name="playerThreeHero2" #playerThreeHero2="ngModel"
+          class="death-amount-input" #playerThreeH2Input (focus)="playerThreeH2Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerThreeHero2)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerThreeHero2)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 3:</label>
+        <input type="number" [(ngModel)]="player3Hero3" max="99" name="playerThreeHero3" #playerThreeHero3="ngModel"
+          class="death-amount-input" #playerThreeH3Input (focus)="playerThreeH3Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerThreeHero3)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerThreeHero3)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+
       <ion-item-divider color="dark">
         <h2>Jogador 4</h2>
       </ion-item-divider>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 1:</ion-label>
-        <ion-input type="number" [(ngModel)]="player4Hero1" max="99" name="playerFourHero1" #playerFourHero1="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 2:</ion-label>
-        <ion-input type="number" [(ngModel)]="player4Hero2" max="99" name="playerFourHero2" #playerFourHero2="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label color="dark">Qtd Mortes Heroi 3:</ion-label>
-        <ion-input type="number" [(ngModel)]="player4Hero3" max="99" name="playerFourHero3" #playerFourHero3="ngModel"></ion-input>
-      </ion-item>
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 1:</label>
+        <input type="number" [(ngModel)]="player4Hero1" max="99" name="playerFourHero1" #playerFourHero1="ngModel"
+          class="death-amount-input" #playerFourH1Input (focus)="playerFourH1Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerFourHero1)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerFourHero1)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 2:</label>
+        <input type="number" [(ngModel)]="player4Hero2" max="99" name="playerFourHero2" #playerFourHero2="ngModel"
+          class="death-amount-input" #playerFourH2Input (focus)="playerFourH2Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerFourHero2)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerFourHero2)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
+      <ion-row class="row-death-item">
+        <label class="death-amount-label">Qtd Mortes Heroi 3:</label>
+        <input type="number" [(ngModel)]="player4Hero3" max="99" name="playerFourHero3" #playerFourHero3="ngModel"
+          class="death-amount-input" #playerFourH3Input (focus)="playerFourH3Input.select()">
+
+        <div class="bt-arrows-ctrl">
+          <button ion-button icon-only (click)="incrementHeroDeath(playerFourHero3)">
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="decrementHeroDeath(playerFourHero3)">
+            <ion-icon name="arrow-round-down"></ion-icon>
+          </button>
+        </div>
+      </ion-row>
     </ion-item-group>
   </form>
 </ion-content>

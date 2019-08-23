@@ -5,4 +5,29 @@ page-curse {
     background-size: cover;
     background-position: center;
   }
+
+  .death-amount-label {
+    text-align: center;
+    max-width: 25%;
+  }
+
+  .death-amount-input {
+    text-align: center;
+    max-width: 25%;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+  }
+
+  .bt-arrows-ctrl {
+    text-align: center;
+    min-width: 50%;
+  }
+
+  .row-death-item {
+    background-color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 0.55px solid #c8c7cc;
+  }
 }

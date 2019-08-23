@@ -10,18 +10,6 @@ import { HeroCurse } from '../../model/heroCurse';
   templateUrl: 'curse-result.html',
 })
 export class CurseResultPage {
-  /**
-INFD-00	- 10 cartas
-INFD-01	- 3 cartas
-INFD-02	- 2 cartas
-INFD-03	- 3 cartas
-INFD-04	- 2 cartas
-INFD-05	- 2 cartas
-INFD-06	- 1 carta
-INFD-07	- 1 carta
-24 total
-   */
-
   public players: PlayerCurse[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
