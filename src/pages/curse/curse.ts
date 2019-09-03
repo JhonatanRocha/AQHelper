@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams, Loading, LoadingController } from 
 import { Curse } from '../../model/curse';
 import { HeroCurse } from '../../model/heroCurse';
 import { NgModel } from '@angular/forms';
+import { Globalization } from '@ionic-native/globalization';
 
 @IonicPage()
 @Component({
@@ -26,18 +27,20 @@ export class CursePage {
   public player4Hero3 = 0;
 
   public loading: Loading;
+  public loadingText: string;
   public isInferno = false;
   public playersCurseForm: any[] = [];
   public players: PlayerCurse[] = [];
   public aqCurses: Curse[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private _loadingCtrl: LoadingController) {
+    private _loadingCtrl: LoadingController, private globalization: Globalization) {
+      this.verificaIdiomaLoadingText();
   }
 
   public begeinDraftCurse(): void {
     this.loading = this._loadingCtrl.create({
-      content: 'Embaralhando e distribuindo Maldições...'
+      content: this.loadingText
     });
     this.loading.present();
 
@@ -52,6 +55,18 @@ export class CursePage {
         players: this.players
       });
     }, 3000);
+  }
+
+  private verificaIdiomaLoadingText(): void {
+    this.globalization.getPreferredLanguage().then(result => {
+      if (result.value == 'en-US') {
+        this.loadingText = 'Shuffling and Drafting Curses...'
+      } else if (result.value == 'es-ES') {
+        this.loadingText = '...'
+      } else {
+        this.loadingText = 'Embaralhando e distribuindo Maldições...';
+      }
+    });
   }
 
   private buildPlayersDeath(): any[] {

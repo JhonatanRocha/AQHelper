@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
+import { TranslateModule } from '@ngx-translate/core';
 import { RespawnResultPage } from './respawn-result';
 
 @NgModule({
@@ -8,6 +9,7 @@ import { RespawnResultPage } from './respawn-result';
   ],
   imports: [
     IonicPageModule.forChild(RespawnResultPage),
+    TranslateModule.forChild()
   ],
   exports: [
     RespawnResultPage

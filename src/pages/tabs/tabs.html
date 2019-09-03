@@ -1,6 +1,6 @@
 <ion-tabs>
   <!-- <ion-tab [root]="draftPage" tabTitle="SAVE" tabIcon="bookmarks"></ion-tab> -->
-  <ion-tab [root]="fightPage" tabTitle="BATALHA" tabIcon="medal"></ion-tab>
-  <ion-tab [root]="respawnPage" tabTitle="RESPAWN" tabIcon="archive"></ion-tab>
-  <ion-tab [root]="cursePage" tabTitle="MALDIÇÃO" tabIcon="flame"></ion-tab>
+  <ion-tab [root]="fightPage" tabTitle="{{ tabFightName | translate }}" tabIcon="medal"></ion-tab>
+  <ion-tab [root]="respawnPage" tabTitle="{{ tabRespawnName | translate }}" tabIcon="archive"></ion-tab>
+  <ion-tab [root]="cursePage" tabTitle="{{ tabCurseName | translate }}" tabIcon="flame"></ion-tab>
 </ion-tabs>

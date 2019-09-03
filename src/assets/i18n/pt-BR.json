@@ -1,0 +1,27 @@
+{
+  "BATALHA_TAB_TITULO": "BATALHA",
+  "BATALHA_ATAQUE_MELEE_HEADER": "ATAQUE PRÓXIMO",
+  "BATALHA_ATAQUE_RANGED_HEADER": "ATAQUE A DISTÂNCIA",
+  "BATALHA_ATAQUE_INPUT_LABEL": "Qtd de Ataque",
+  "BATALHA_ATAQUE_RANGED_LABEL_TOGGLE": "Ataque a Distância?",
+  "BATALHA_REROLL_LABEL_TOGGLE": "Há Rerrolagem?",
+  "BATALHA_INPUT_REROLL": "Qtd de Rerrolagem",
+  "BATALHA_DEFESA_HEADER": "DEFESA",
+  "BATALHA_DEFESA_INPUT_LABEL": "Qtd de Defesa",
+  
+  "BATALHA_RESULTADO_NAVBAR_TITULO": "Resultado da Batalha",
+  "BATALHA_RESULTADO_ATAQUE_SUCESSO": "Ataque com Sucesso!",
+  "BATALHA_RESULTADO_ATAQUE_FALHA": "Ataque Bloqueado!",
+
+  "RESPAWN_TAB_TITULO": "RESPAWN",
+  "RESPAWN_BTN_LABEL": "ROLAR RESPAWN",
+  "RESPAWN_RESULTADO_NAVBAR_TITULO": "Resultado do Respawn",
+  "RESPAWN_RESULTADO_WARN_TEXT": "Note que o aplicativo não considera os espaços ocupados do tabuleiro, apenas os resultados dos dados.",
+
+  "CURSE_TAB_TITULO": "MALDIÇÃO",
+  "CURSE_JOGADOR": "Jogador",
+  "CURSE_QTD_MORTE_LABEL": "Qtd Mortes Heroi",
+  "CURSE_HERO_LABEL": "Herói",
+  "CURSE_SEM_MORTES": "Não houve morte!",
+  "CURSE_RESULTADO_NAVBAR_TITULO": "Resultado das Maldições"
+}

@@ -1,0 +1,27 @@
+{
+  "BATALHA_TAB_TITULO": "BATTLE",
+  "BATALHA_ATAQUE_MELEE_HEADER": "MELEE ATTACK",
+  "BATALHA_ATAQUE_RANGED_HEADER": "RANGED ATTACK",
+  "BATALHA_ATAQUE_INPUT_LABEL": "Amount of Attack",
+  "BATALHA_ATAQUE_RANGED_LABEL_TOGGLE": "Ranged Attack?",
+  "BATALHA_REROLL_LABEL_TOGGLE": "Has Rerroll?",
+  "BATALHA_INPUT_REROLL": "Amount of Rerroll",
+  "BATALHA_DEFESA_HEADER": "DEFENSE",
+  "BATALHA_DEFESA_INPUT_LABEL": "Amount of Defense",
+
+  "BATALHA_RESULTADO_NAVBAR_TITULO": "Battle Result",
+  "BATALHA_RESULTADO_ATAQUE_SUCESSO": "Attack Successful!",
+  "BATALHA_RESULTADO_ATAQUE_FALHA": "Attack Blocked!",
+
+  "RESPAWN_TAB_TITULO": "RESPAWN",
+  "RESPAWN_BTN_LABEL": "ROLL RESPAWN",
+  "RESPAWN_RESULTADO_NAVBAR_TITULO": "Respawn Result",
+  "RESPAWN_RESULTADO_WARN_TEXT": "Note that the app doesn't consider occupied spaces on the board, just the dice results.",
+
+  "CURSE_TAB_TITULO": "CURSE",
+  "CURSE_JOGADOR": "Player",
+  "CURSE_QTD_MORTE_LABEL": "Amount of Death Hero",
+  "CURSE_HERO_LABEL": "Hero",
+  "CURSE_SEM_MORTES": "There was no death!",
+  "CURSE_RESULTADO_NAVBAR_TITULO": "Curse Result"
+}

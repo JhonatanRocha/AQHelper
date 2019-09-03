@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>Resultado</ion-title>
+    <ion-title>{{ 'CURSE_RESULTADO_NAVBAR_TITULO' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,13 +8,13 @@
   <ion-grid text-center>
     <ion-row *ngFor="let player of players">
       <ion-item-divider color="dark">
-        <span item-center>Jogador {{ player.id }}</span>
+        <span item-center>{{ 'CURSE_JOGADOR' | translate }} {{ player.id }}</span>
       </ion-item-divider>
       <ion-col col-4 *ngFor="let hero of player.heroes">
         <ion-item-divider color="light">
-          <span item-center>Herói {{ hero.id }}</span>
+          <span item-center>{{ 'CURSE_HERO_LABEL' | translate }} {{ hero.id }}</span>
         </ion-item-divider>
-        <h3 *ngIf="!hero.curse">Não houve morte!</h3>
+        <h3 *ngIf="!hero.curse">{{ 'CURSE_SEM_MORTES' | translate }}</h3>
         <img *ngIf="hero.curse" width="80" height="120" [src]="hero.curse.img">
       </ion-col>
     </ion-row>

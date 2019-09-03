@@ -14,57 +14,57 @@
     <ion-item-group>
       <ion-item-divider color="dark">
         <ion-img width="30" height="30" [src]="pathDiceAttack"></ion-img>
-        <h2>{{ headerAttack | uppercase }}</h2>
+        <h2>{{ headerAttack | translate }}</h2>
       </ion-item-divider>
 
       <ion-item>
-        <ion-label color="dark">Qtd de Ataque</ion-label>
-        <ion-input type="number" [(ngModel)]="diceAttack" max="99"
-          name="amountAttack" #amountAttack="ngModel" #qtdAttack (ionFocus)="selectInputTextContent(qtdAttack)"></ion-input>
+        <ion-label color="dark">{{ 'BATALHA_ATAQUE_INPUT_LABEL' | translate }}:</ion-label>
+        <ion-input type="number" [(ngModel)]="diceAttack" max="99" name="amountAttack" #amountAttack="ngModel"
+          #qtdAttack (ionFocus)="selectInputTextContent(qtdAttack)"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>
-          Ataque a Distância
-        </ion-label>
+        <ion-label>{{ 'BATALHA_ATAQUE_RANGED_LABEL_TOGGLE' | translate }}</ion-label>
         <ion-toggle #toggleRanged color="primary" (ionChange)="toggleRangedAttack(toggleRanged.checked)">
         </ion-toggle>
       </ion-item>
       <ion-item>
         <ion-label class="labelRerrol">
           <ion-img width="30" height="30" src="assets/imgs/dices/reroll.png"></ion-img>
-          <h2 style="margin-left: 10px">Há Rerrolagem?</h2>
+          <h2 style="margin-left: 10px">{{ 'BATALHA_REROLL_LABEL_TOGGLE' | translate }}</h2>
         </ion-label>
         <ion-toggle #toggleRerrollAttack color="primary" (ionChange)="hasRerrolAttack(toggleRerrollAttack.checked)">
         </ion-toggle>
       </ion-item>
       <ion-item *ngIf="flagRerrollAttack">
-        <ion-label color="dark">Qtd de Rerolagem</ion-label>
-        <ion-input type="number" [(ngModel)]="rerrollAtack" max="99"
-          name="amountRerrollAttack" #amountRerrollAttack="ngModel" #qtdAttackRerrol (ionFocus)="selectInputTextContent(qtdAttackRerrol)"></ion-input>
+        <ion-label color="dark">{{ 'BATALHA_INPUT_REROLL' | translate }}:</ion-label>
+        <ion-input type="number" [(ngModel)]="rerrollAtack" max="99" name="amountRerrollAttack"
+          #amountRerrollAttack="ngModel" #qtdAttackRerrol (ionFocus)="selectInputTextContent(qtdAttackRerrol)">
+        </ion-input>
       </ion-item>
     </ion-item-group>
     <ion-item-group>
       <ion-item-divider color="dark">
         <ion-img width="30" height="30" src="assets/imgs/dices/symbol_block.png"></ion-img>
-        <h2>DEFESA</h2>
+        <h2>{{ 'BATALHA_DEFESA_HEADER' | translate }}</h2>
       </ion-item-divider>
       <ion-item>
-        <ion-label color="dark">Qtd de Defesa</ion-label>
-        <ion-input type="number" [(ngModel)]="diceDefense" max="99"
-        name="amountDefense" #amountDefense="ngModel" #qtdDefense (ionFocus)="selectInputTextContent(qtdDefense)"></ion-input>
+        <ion-label color="dark">{{ 'BATALHA_DEFESA_INPUT_LABEL' | translate }}:</ion-label>
+        <ion-input type="number" [(ngModel)]="diceDefense" max="99" name="amountDefense" #amountDefense="ngModel"
+          #qtdDefense (ionFocus)="selectInputTextContent(qtdDefense)"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label class="labelRerrol">
           <ion-img width="30" height="30" src="assets/imgs/dices/reroll.png"></ion-img>
-          <h2 style="margin-left: 10px">Há Rerrolagem?</h2>
+          <h2 style="margin-left: 10px">{{ 'BATALHA_REROLL_LABEL_TOGGLE' | translate }}</h2>
         </ion-label>
         <ion-toggle #toggleRerrollDefense color="primary" (ionChange)="hasRerrolDefense(toggleRerrollDefense.checked)">
         </ion-toggle>
       </ion-item>
       <ion-item *ngIf="flagRerrollDefense">
-        <ion-label color="dark">Qtd de Rerolagem</ion-label>
-        <ion-input type="number" [(ngModel)]="rerrollDefense" max="99"
-        name="amountRerrollDefense" #amountRerrollDefense="ngModel" #qtdDefenseReroll (ionFocus)="selectInputTextContent(qtdDefenseReroll)"></ion-input>
+        <ion-label color="dark">{{ 'BATALHA_INPUT_REROLL' | translate }}:</ion-label>
+        <ion-input type="number" [(ngModel)]="rerrollDefense" max="99" name="amountRerrollDefense"
+          #amountRerrollDefense="ngModel" #qtdDefenseReroll (ionFocus)="selectInputTextContent(qtdDefenseReroll)">
+        </ion-input>
       </ion-item>
     </ion-item-group>
 

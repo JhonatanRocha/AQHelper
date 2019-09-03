@@ -111,9 +111,9 @@ export class FightResultPage {
 
     if(this.wound > 0) {
       this.imgFightResult = 'assets/imgs/dices/attack.png';
-      this.textFightResult = 'Ataque com Sucesso!';
+      this.textFightResult = 'BATALHA_RESULTADO_ATAQUE_SUCESSO';
     } else {
-      this.textFightResult = 'Ataque Bloqueado!';
+      this.textFightResult = 'BATALHA_RESULTADO_ATAQUE_FALHA';
       this.imgFightResult = 'assets/imgs/dices/defense.png';
     }
   }

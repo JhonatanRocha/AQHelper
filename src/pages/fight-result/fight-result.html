@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>Resultado</ion-title>
+    <ion-title>{{ 'BATALHA_RESULTADO_NAVBAR_TITULO' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -38,7 +38,7 @@
     </ion-row>
     <ion-row [class.divider-sucess]="this.wound > 0" [class.divider-error]="!this.wound > 0">
       <ion-col col-6>
-        <h5 style="margin-top: 15px; color: #ffffff">{{textFightResult | uppercase}}</h5>
+        <h5 style="margin-top: 15px; color: #ffffff">{{textFightResult | uppercase | translate }}</h5>
       </ion-col>
       <ion-col col-6>
         <ion-img [src]="imgFightResult" width="70" height="64" style="border-radius: 45px;"></ion-img>

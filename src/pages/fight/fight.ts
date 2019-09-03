@@ -19,17 +19,17 @@ export class FightPage {
   public pathDiceAttack: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.headerAttack = 'Ataque Próximo';
+    this.headerAttack = 'BATALHA_ATAQUE_MELEE_HEADER';
     this.pathDiceAttack = 'assets/imgs/dices/symbol_melee_reverse.png';
   }
 
   public toggleRangedAttack(toggleRangedAttack: boolean): void {
     if (toggleRangedAttack) {
       this.pathDiceAttack = 'assets/imgs/dices/symbol_ranged_reverse.png';
-      this.headerAttack = 'Ataque a Distância';
+      this.headerAttack = 'BATALHA_ATAQUE_RANGED_HEADER';
     } else {
       this.pathDiceAttack = 'assets/imgs/dices/symbol_melee_reverse.png';
-      this.headerAttack = 'Ataque Próximo';
+      this.headerAttack = 'BATALHA_ATAQUE_MELEE_HEADER';
     }
 
     this.flagIsRangedAttack = toggleRangedAttack;
