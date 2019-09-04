@@ -62,7 +62,7 @@ export class CursePage {
       if (result.value == 'en-US') {
         this.loadingText = 'Shuffling and Drafting Curses...'
       } else if (result.value == 'es-ES') {
-        this.loadingText = '...'
+        this.loadingText = 'Baraja y repartindo las maldiciones...'
       } else {
         this.loadingText = 'Embaralhando e distribuindo Maldições...';
       }
@@ -211,60 +211,59 @@ export class CursePage {
 
   public getBaseCurseDeck(): void {
     this.aqCurses = [
-      { id: 0, numberOfCard: 1, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 2, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 3, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 4, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 5, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 6, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 7, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 8, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 9, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 10, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 1, numberOfCard: 1, name: 'Hidrofobia', description: 'Este Herói não pode usar marcadores de Poção', img: 'assets/imgs/curses/base/1.png' },
-      { id: 2, numberOfCard: 1, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem nehum outro efeito.', img: 'assets/imgs/curses/base/2.png' },
-      { id: 2, numberOfCard: 2, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem nehum outro efeito.', img: 'assets/imgs/curses/base/2.png' },
-      { id: 2, numberOfCard: 3, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem nehum outro efeito.', img: 'assets/imgs/curses/base/2.png' },
-      { id: 2, numberOfCard: 4, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem nehum outro efeito.', img: 'assets/imgs/curses/base/2.png' },
-      { id: 3, numberOfCard: 1, name: 'Nariz Sangrando', description: '-1 Vida', img: 'assets/imgs/curses/base/3.png' },
-      { id: 3, numberOfCard: 2, name: 'Nariz Sangrando', description: '-1 Vida', img: 'assets/imgs/curses/base/3.png' },
-      { id: 4, numberOfCard: 1, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
-      { id: 4, numberOfCard: 2, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
-      { id: 4, numberOfCard: 3, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
-      { id: 5, numberOfCard: 1, name: 'Nariz Sangrando Muito', description: 'Ocupa um espaço de carta. -1 Vida', img: 'assets/imgs/curses/base/5.png' },
-      { id: 5, numberOfCard: 2, name: 'Nariz Sangrando Muito', description: 'Ocupa um espaço de carta. -1 Vida', img: 'assets/imgs/curses/base/5.png' },
-      { id: 6, numberOfCard: 1, name: 'Propenso a Acidentes', description: 'Este Herói sofre 1 Ferimento se o seu ataque não causa Ferimento Algum.', img: 'assets/imgs/curses/base/6.png' },
-      { id: 7, numberOfCard: 1, name: 'Atordoado e Confuso', description: 'Se este Herói sofre pelo menos 1 Ferimento, ele fica Atordoado.', img: 'assets/imgs/curses/base/7.png' }
+      { id: 0, code: 'D-00', numberOfCard: 1, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'D-00', numberOfCard: 2, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'D-00', numberOfCard: 3, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'D-00', numberOfCard: 4, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'D-00', numberOfCard: 5, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'D-00', numberOfCard: 6, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'D-00', numberOfCard: 7, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'D-00', numberOfCard: 8, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'D-00', numberOfCard: 9, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'D-00', numberOfCard: 10, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 1, code: 'D-01', numberOfCard: 1, name: 'Hidrofobia', description: 'Este Herói não pode usar marcadores de Poção', img: 'assets/imgs/curses/base/1.png' },
+      { id: 2, code: 'D-02', numberOfCard: 1, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem nehum outro efeito.', img: 'assets/imgs/curses/base/2.png' },
+      { id: 2, code: 'D-02', numberOfCard: 2, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem nehum outro efeito.', img: 'assets/imgs/curses/base/2.png' },
+      { id: 2, code: 'D-02', numberOfCard: 3, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem nehum outro efeito.', img: 'assets/imgs/curses/base/2.png' },
+      { id: 2, code: 'D-02', numberOfCard: 4, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem nehum outro efeito.', img: 'assets/imgs/curses/base/2.png' },
+      { id: 3, code: 'D-03', numberOfCard: 1, name: 'Nariz Sangrando', description: '-1 Vida', img: 'assets/imgs/curses/base/3.png' },
+      { id: 3, code: 'D-03', numberOfCard: 2, name: 'Nariz Sangrando', description: '-1 Vida', img: 'assets/imgs/curses/base/3.png' },
+      { id: 4, code: 'D-04', numberOfCard: 1, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
+      { id: 4, code: 'D-04', numberOfCard: 2, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
+      { id: 4, code: 'D-04', numberOfCard: 3, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
+      { id: 5, code: 'D-05', numberOfCard: 1, name: 'Nariz Sangrando Muito', description: 'Ocupa um espaço de carta. -1 Vida', img: 'assets/imgs/curses/base/5.png' },
+      { id: 5, code: 'D-05', numberOfCard: 2, name: 'Nariz Sangrando Muito', description: 'Ocupa um espaço de carta. -1 Vida', img: 'assets/imgs/curses/base/5.png' },
+      { id: 6, code: 'D-06', numberOfCard: 1, name: 'Propenso a Acidentes', description: 'Este Herói sofre 1 Ferimento se o seu ataque não causa Ferimento Algum.', img: 'assets/imgs/curses/base/6.png' },
+      { id: 7, code: 'D-07', numberOfCard: 1, name: 'Atordoado e Confuso', description: 'Se este Herói sofre pelo menos 1 Ferimento, ele fica Atordoado.', img: 'assets/imgs/curses/base/7.png' }
     ];
   }
 
   public getInfernoCurseDeck(): void {
     this.aqCurses = [
-      { id: 0, numberOfCard: 1, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 2, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 3, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 4, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 5, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 6, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 7, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 8, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 9, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 0, numberOfCard: 10, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
-      { id: 1, numberOfCard: 1, name: 'Condenado', description: '+1 Token de Condenação', img: 'assets/imgs/curses/inferno/1.png' },
-      { id: 1, numberOfCard: 2, name: 'Condenado', description: '+1 Token de Condenação', img: 'assets/imgs/curses/inferno/1.png' },
-      { id: 1, numberOfCard: 3, name: 'Condenado', description: '+1 Token de Condenação', img: 'assets/imgs/curses/inferno/1.png' },
-      { id: 2, numberOfCard: 1, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem outro efeito.', img: 'assets/imgs/curses/base/2.png' },
-      { id: 2, numberOfCard: 2, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem outro efeito.', img: 'assets/imgs/curses/base/2.png' },
-      { id: 3, numberOfCard: 1, name: 'Pecador', description: 'Toda vez que este Herói recebe qualquer quantidade de Condenação, ele recebe 1 Condenação adicional', img: 'assets/imgs/curses/inferno/3.png' },
-      { id: 3, numberOfCard: 2, name: 'Pecador', description: 'Toda vez que este Herói recebe qualquer quantidade de Condenação, ele recebe 1 Condenação adicional', img: 'assets/imgs/curses/inferno/3.png' },
-      { id: 3, numberOfCard: 3, name: 'Pecador', description: 'Toda vez que este Herói recebe qualquer quantidade de Condenação, ele recebe 1 Condenação adicional', img: 'assets/imgs/curses/inferno/3.png' },
-      { id: 4, numberOfCard: 1, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
-      { id: 4, numberOfCard: 2, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
-      { id: 5, numberOfCard: 1, name: 'Nariz Sangrando Muito', description: 'Ocupa um espaço de carta. -1 Vida', img: 'assets/imgs/curses/base/5.png' },
-      { id: 5, numberOfCard: 2, name: 'Nariz Sangrando Muito', description: 'Ocupa um espaço de carta. -1 Vida', img: 'assets/imgs/curses/base/5.png' },
-      { id: 6, numberOfCard: 1, name: 'Paranoia', description: '', img: 'assets/imgs/curses/inferno/6.png' },
-      { id: 7, numberOfCard: 1, name: 'Condenado Eternamente', description: 'Ocupa um Espaço de carta. +3 Tokens de Condenação', img: 'assets/imgs/curses/inferno/7.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 1, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 2, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 3, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 4, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 5, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 6, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 7, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 8, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 9, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 0, code: 'INFD-00', numberOfCard: 10, name: 'Sem Maldição', description: 'Nada acontece. Descarte esta carta.', img: 'assets/imgs/curses/base/0.png' },
+      { id: 1, code: 'INFD-01', numberOfCard: 1, name: 'Condenado', description: '+1 Token de Condenação', img: 'assets/imgs/curses/inferno/1.png' },
+      { id: 1, code: 'INFD-01', numberOfCard: 2, name: 'Condenado', description: '+1 Token de Condenação', img: 'assets/imgs/curses/inferno/1.png' },
+      { id: 1, code: 'INFD-01', numberOfCard: 3, name: 'Condenado', description: '+1 Token de Condenação', img: 'assets/imgs/curses/inferno/1.png' },
+      { id: 2, code: 'INFD-02', numberOfCard: 1, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem outro efeito.', img: 'assets/imgs/curses/base/2.png' },
+      { id: 2, code: 'INFD-02', numberOfCard: 2, name: 'Estado de Choque', description: 'Ocupa um espaço de carta. Não tem outro efeito.', img: 'assets/imgs/curses/base/2.png' },
+      { id: 3, code: 'INFD-03', numberOfCard: 1, name: 'Pecador', description: 'Toda vez que este Herói recebe qualquer quantidade de Condenação, ele recebe 1 Condenação adicional', img: 'assets/imgs/curses/inferno/3.png' },
+      { id: 3, code: 'INFD-03', numberOfCard: 2, name: 'Pecador', description: 'Toda vez que este Herói recebe qualquer quantidade de Condenação, ele recebe 1 Condenação adicional', img: 'assets/imgs/curses/inferno/3.png' },
+      { id: 3, code: 'INFD-03', numberOfCard: 3, name: 'Pecador', description: 'Toda vez que este Herói recebe qualquer quantidade de Condenação, ele recebe 1 Condenação adicional', img: 'assets/imgs/curses/inferno/3.png' },
+      { id: 4, code: 'INFD-04', numberOfCard: 1, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
+      { id: 4, code: 'INFD-04', numberOfCard: 2, name: 'Amnésia', description: 'Coloque esta carta sobre a carta de Herói. Este Herói perde sua Habilidade Narutal.', img: 'assets/imgs/curses/base/4.png' },
+      { id: 5, code: 'INFD-05', numberOfCard: 1, name: 'Nariz Sangrando Muito', description: 'Ocupa um espaço de carta. -1 Vida', img: 'assets/imgs/curses/base/5.png' },
+      { id: 5, code: 'INFD-05', numberOfCard: 2, name: 'Nariz Sangrando Muito', description: 'Ocupa um espaço de carta. -1 Vida', img: 'assets/imgs/curses/base/5.png' },
+      { id: 6, code: 'INFD-06', numberOfCard: 1, name: 'Paranoia', description: '', img: 'assets/imgs/curses/inferno/6.png' },
+      { id: 7, code: 'INFD-07', numberOfCard: 1, name: 'Condenado Eternamente', description: 'Ocupa um Espaço de carta. +3 Tokens de Condenação', img: 'assets/imgs/curses/inferno/7.png' },
     ];
   }
-
 }

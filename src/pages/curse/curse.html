@@ -103,7 +103,7 @@
       <ion-row class="row-death-item">
         <label class="death-amount-label">{{ 'CURSE_QTD_MORTE_LABEL' | translate }} 3:</label>
         <input type="number" [(ngModel)]="player2Hero3" max="99" name="playerTwoHero3" #playerTwoHero3="ngModel"
-          class="death-amount-input" #playerTwoH3Input (focus)="playerTwoH2Input.select()">
+          class="death-amount-input" #playerTwoH3Input (focus)="playerTwoH3Input.select()">
 
         <div class="bt-arrows-ctrl">
           <button ion-button icon-only (click)="incrementHeroDeath(playerTwoHero3)">

@@ -1,0 +1,27 @@
+{
+  "BATALHA_TAB_TITULO": "BATALLA",
+  "BATALHA_ATAQUE_MELEE_HEADER": "ATAQUE CUERPO A CUERPO",
+  "BATALHA_ATAQUE_RANGED_HEADER": "ATAQUE A DISTANCIA",
+  "BATALHA_ATAQUE_INPUT_LABEL": "Ctd de Ataque",
+  "BATALHA_ATAQUE_RANGED_LABEL_TOGGLE": "Ataque a Distancia?",
+  "BATALHA_REROLL_LABEL_TOGGLE": "Hay Repetir Tiradas?",
+  "BATALHA_INPUT_REROLL": "Ctd de Tiradas Repetidas",
+  "BATALHA_DEFESA_HEADER": "DEFENSA",
+  "BATALHA_DEFESA_INPUT_LABEL": "Ctd de Defensa",
+
+  "BATALHA_RESULTADO_NAVBAR_TITULO": "Resultado de Batalla",
+  "BATALHA_RESULTADO_ATAQUE_SUCESSO": "Ataque Exitoso!",
+  "BATALHA_RESULTADO_ATAQUE_FALHA": "Ataque Bloqueado!",
+
+  "RESPAWN_TAB_TITULO": "APARICIÓN",
+  "RESPAWN_BTN_LABEL": "REALIZAR APARICIÓN",
+  "RESPAWN_RESULTADO_NAVBAR_TITULO": "Resultado del Aparición",
+  "RESPAWN_RESULTADO_WARN_TEXT": "Tenga en cuenta que la aplicación no considera las casillas ocupadas del tablero, solo los resultados de los dados.",
+
+  "CURSE_TAB_TITULO": "MALDICIÓN",
+  "CURSE_JOGADOR": "Jugador",
+  "CURSE_QTD_MORTE_LABEL": "Ctd Muertes Héroe",
+  "CURSE_HERO_LABEL": "Héroe",
+  "CURSE_SEM_MORTES": "No tuvo muerte!",
+  "CURSE_RESULTADO_NAVBAR_TITULO": "Resultado das Maldiciones"
+}

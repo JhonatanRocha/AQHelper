@@ -16,6 +16,7 @@
         </ion-item-divider>
         <h3 *ngIf="!hero.curse">{{ 'CURSE_SEM_MORTES' | translate }}</h3>
         <img *ngIf="hero.curse" width="80" height="120" [src]="hero.curse.img">
+        <span *ngIf="hero.curse" item-center class="card-code">{{ hero.curse.code }}</span>
       </ion-col>
     </ion-row>
   </ion-grid>
