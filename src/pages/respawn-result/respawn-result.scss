@@ -59,4 +59,16 @@ page-respawn-result {
   ion-grid {
     color: #ffffff;
   }
+
+  img.nav-avatar {
+    height: 35px;
+    width: 35px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  .toolbar-content {
+    display: inline-flex;
+  }
 }
